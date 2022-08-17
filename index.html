@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <!-- Inputs -->
+    <div class= " bg-white border-8 h-full">
+    <div class="bg-black w-full border-solid py-3">
+      <h1 class="text-4xl font-bold text-center text-white">Grade calculation system</h1>
+    </div>
+        <div class=" w-full m-2  space-x-2 grid grid-cols-1 lg:grid-cols-3">
+          <div><button class=" bg-yellow-300 hover:bg-yellow-400 p-2 rounded-sm border-2 focus:outline-none focus:border-gray-400 focus:ring-skyring-gray-400" id="reload" onclick="refresh();" >Refresh</button></div>
+          <div>
+          <label>Name</label>
+          <input name="m" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400" type="text" id="n" placeholder="Enter your name">
+          </div>
+          <div>
+          <label>Roll no</label>
+          <input name="m" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400" type="number" id="r" placeholder="Enter your rollNumber">
+          </div>
+        </div>
+        <div class="grid grid-cols-1 lg:grid-cols-2 ">
+          <!-- marks -->
+        <div class="md:mx-24  p-8 ">
+      <p id="outOf" class="text-red-700" ></p>
+        <label>English</label><br>
+        <input type="number" name="m" id="subject1" placeholder="marks out of 100" max="100" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400"><br>
+        <label>Science</label><br>
+        <input type="number" name="m" id="subject2" placeholder="marks out of 100" max="100" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400"><br>
+        <label>Math</label><br>
+        <input type="number" name="m" id="subject3" placeholder="marks out of 100" max="100" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400"><br>
+        <label>Computer</label><br>
+        <input type="number" name="m" id="subject4" placeholder="marks out of 100" max="100" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400"><br>
+        <label>Urdu</label><br>
+        <input type="number" name="m" id="subject5" placeholder="marks out of 100" max="100" class=" px-1 my-1  border-2 border-gray-400 rounded-md  focus:outline-none focus:border-yellow-300 focus:ring-skyring-sky-400"><br>
+        <button class=" mt-5 my-2 py-2  bg-yellow-300 hover:bg-yellow-400  rounded-sm border-2 focus:outline-none focus:border-gray-400 focus:ring-skyring-gray-400 " onclick="calculate(); ">  Calculate </button>
+    <p id="fill"></p>
+      </div>
+        <!-- Result -->
+      <div id="display" class="hidden">
+        <table>
+          <tr class="">
+            <td>Name </td>
+            <td id="Name"></td>
+            <tr><br>
+          </tr>
+            <td>Roll no</td>
+            <td id="Roll_no"></td>
+          </tr>
+          <tr>
+            <td>Total Marks</td>
+            <td>500<td>
+          </tr>
+          <tr>
+            <td>Obtain marks</td>
+            <td id="marks"></td>
+          </tr>
+          <tr>
+            <td>Percentage</td>
+            <td id="per"></td>
+          </tr>
+          <tr>
+            <td>Grade</td>
+            <td id="grade"></td>
+          </tr>
+        </table>
+      </div>
+</div>
+    </div>
+    <script src="marksheet.js" ></script>
+  </body>
+</html>
